@@ -1,0 +1,88 @@
+/*Browser Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+ }
+ 
+ nav a {
+    text-decoration: none;
+ }
+
+ img{
+    max-width: 100%;
+ }
+
+ /*Mobile First*/
+ header h1{
+    background-color: #88CC88;
+    color: #116611;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: .5em;
+ }
+ 
+ nav ul{
+    background-color: #A5C663;
+    color: #116611;
+    text-align: center;
+    padding: 0.7em;
+ }
+
+ .section{
+    background-color: #116611;
+    font-size: x-large;
+    color: #669999;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    gap: 0.5em;
+ }
+
+ @media (min-width: 768px) and (max-width: 1024px) {
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li{
+        font-size: 24pt;
+    }
+
+    .section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1em;
+        gap: 0.5em;
+    }
+ }
+
+ @media (min-width: 1025px){
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    header h1{
+        font-size: 56pt;
+    }
+    nav ul li{
+        font-size: 32pt;
+    }
+    .section{
+        display: grid;
+        grid-template-columns: 2fr 2fr 3fr;
+        grid-template-rows: 3fr 4fr;
+    }
+ }
